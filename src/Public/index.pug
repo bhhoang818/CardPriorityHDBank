@@ -1,0 +1,24 @@
+extends ../views/layout/_layout.pug
+
+block var
+	- var title = ''
+	- var bodyClass = 'homepage'
+
+
+block main
+	.full-page
+		include ../components/Pages/Home/Index-1/index
+		include ../components/Pages/Home/Index-2/index
+		include ../components/Pages/Home/Index-3/index
+		include ../components/Pages/Home/Index-4/index
+		include ../components/Pages/Home/Index-5/index
+		include ../components/Pages/Home/Index-6/index
+		include ../components/Pages/Home/Index-7/index
+		include ../views/global/dialog/dialogSuccess
+		include ../views/global/dialog/dialogInfoCard
+		include ../views/global/dialog/dialogEmail
+		include ../views/global/dialog/dialogHoanTien
+		include ../views/global/dialog/dialogDacQuyen
+		include ../views/global/dialog/dialogTraiNghiem
+		include ../views/global/dialog/dialogExit.pug
+

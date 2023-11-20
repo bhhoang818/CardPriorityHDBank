@@ -1,0 +1,81 @@
+.sec-1
+	.hero-banner
+		position: relative
+		&_img
+			+img-ratio(math.div(930, 1920))
+			width: 100vw
+			height: 100vh
+			img
+				transform: scale(.9)
+		.scroll-div-triggle
+			height: calc(215/1920*100*1rem)
+			bottom: 5%
+			left: 0
+			@apply absolute
+			.content
+				@apply flex justify-between items-center w-full
+				button
+					width: calc( 240/1920*100*1rem )
+					height: calc( 50/1920*100*1rem )
+					@apply text-primary-5B2D40 text-2xl font-bold px-4 py-2 whitespace-nowrap bg-primary-FBD597 border-2 border-primary-CAAE98 rounded-full
+				.banner-title
+					h1
+						text-shadow: 2px 2px 2px #000
+						background: linear-gradient(180deg, #D1AB6A 33.85%, #F5CE8F 73.44%, #FCD698 100%)
+						background-clip: text
+						-webkit-background-clip: text
+						-webkit-text-fill-color: #FCD698
+						@apply text-6xl italic font-black leading-normal
+					p
+						@apply text-5xl italic font-medium leading-normal text-primary-FFD998
+	@media screen and ( max-width: 1366px )
+		.hero-banner
+			&_img
+				+img-ratio(math.div(768, 1366))
+				img
+					transform: scale(.95)
+			.scroll-div-triggle
+				bottom: 10%
+				.content
+					.banner-title
+						h1
+							@apply text-5xl leading-normal
+						p
+							@apply text-4xl leading-normal
+
+	@media screen and ( max-width: 1024px )
+		display: block !important
+		.hero-banner
+			&_img
+				width: 100%
+				+img-ratio(math.div(574, 1024))
+				img
+					transform: scale(1)
+			.scroll-div-triggle
+				bottom: 0
+	@media screen and ( max-width: 768px )
+		width: 100%
+		.hero-banner
+			.scroll-div-triggle
+				.content
+					.banner-title
+						h1
+							@apply text-4xl leading-normal
+						p
+							@apply text-4xl leading-normal
+	@media screen and ( max-width: 600px )
+		.hero-banner
+			&_img
+				height: auto
+				width: 100%
+				+img-ratio(math.div(620, 375))
+			.scroll-div-triggle
+				@apply absolute bottom-0
+				.content
+					@apply flex-col justify-center items-center
+					.banner-title
+						margin-bottom: 8px
+						h1
+							@apply text-[23px] leading-normal
+						p
+							@apply text-[18px] leading-normal

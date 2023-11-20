@@ -1,0 +1,52 @@
+section.section#sec-7.sec-7(data-title='Sec 7')
+	.container
+		.w-full.flex.justify-center.items-center.flex-col
+			.sec-logo 
+				a(href="") 
+					img.lazyload(data-src="./img/logo.png" alt="")
+			.desc-sec 
+				h1 Sở hữu thẻ tín dụng cao cấp HDBank Priority
+			form.w-full.form-wrap.grid.gap-7.grid-cols-12(action="" method="post") 
+				input(type="hidden" name="ref" value="")
+				input(type='hidden' name='utm_source' value='')
+				input(type='hidden' name='utm_medium' value='')
+				input(type='hidden' name='utm_campaign' value='')
+
+				.form-group.col-span-full(class='md:col-span-6 lg:col-span-6 xl:col-span-6')
+					input#fullName.form-control.w-full(type="text" placeholder="Họ và Tên" name="fullName")
+					span.error.text-primary-FFD99C.text-sm.italic
+				.form-group.col-span-full(class='md:col-span-6 lg:col-span-6 xl:col-span-6')
+					input#phoneNumber.form-control.w-full(type="text" placeholder="Số điện thoại" name="phoneNumber")
+					span.error.text-primary-FFD99C.text-sm.italic
+				.form-group.col-span-full(class='md:col-span-6 lg:col-span-6 xl:col-span-6')
+					input#email.form-control.w-full(type="text" placeholder="Email" name="email")
+					span.error.text-primary-FFD99C.text-sm.italic
+				.form-group.col-span-full(class='md:col-span-6 lg:col-span-6 xl:col-span-6')
+					input#cmndCCCD.form-control.w-full(type="text" placeholder="Số CMND/CCCD" name="cmndCCCD")
+					span.error.text-primary-FFD99C.text-sm.italic
+				#form-province.form-group.col-span-full
+					select#tinhThanhSelect.form-control(name="province" placeholder="Tỉnh/Thành")
+						option(value="") 
+					span#tinhThanhError.error.text-primary-FFD99C.text-sm.italic
+				#form-quest.form-group.col-span-full
+					select#selectQuest.form-control(name="select" multiple="multiple" placeholder="Quý khách có sở hữu điều nào sau đây không")
+						option(value="") 
+						option(value='lk-1') Được định danh Khách hàng đặc biệt (HDBank Priority)
+						option(value='lk-2') Có sổ tiết kiệm từ 1 tỷ tại HDBank với kỳ hạn 03 tháng trở lên​
+						option(value='lk-3') Có sao kê lương 3 tháng gần nhất từ 50 triệu/ tháng
+					span#selectQuestError.error.text-primary-FFD99C.text-sm.italic
+				.col-span-full.desc.flex
+					input#inputCheck(type="checkbox")
+					label#labelToggle(for="inputCheck") Tôi đã đọc, hiểu rõ và đồng ý đối với toàn bộ nội dung 
+						a.text-primary-FFD99C(href="" data-src='./img/02.QyD-MB.01_Thong bao Xu ly du lieu ca nhan.pdf' data-fancybox data-type='pdf')  Thông báo xử lý dữ liệu cá nhân,
+						a.text-primary-FFD99C(href="" data-src='./img/02.QyD-MB.02_Dieu kien dieu khoan xu ly du lieu ca nhan.pdf' data-fancybox data-type='pdf' download='false') Điều khoản và Điều kiện về xử lý dữ liệu cá nhân 
+						|trước khi cho HDBank xử lý dữ liệu cá nhân của tôi
+						span.error.text-primary-FFD99C.text-sm.italic.mt-2.block
+						#data-exists-error
+				.col-span-full.flex.justify-center.mb-10
+					button#registration-form(type="button" ) 
+						|Đăng ký mở thẻ
+
+
+
+

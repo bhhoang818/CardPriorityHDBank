@@ -1,0 +1,107 @@
+.sec-3
+	@apply bg-primary-5B2D40
+	.block-title
+		width: 626px
+		height: 63px
+		margin: 0 auto r(110px)
+		flex-shrink: 0
+		border-radius: 50px
+		border: 2px solid #F0CD75
+		@apply flex items-center justify-center
+		h1
+			font-size: r(35px)
+			font-weight: 700
+	.items
+		width: calc(1112/1920*100*1rem)
+		margin: 0 auto
+		padding: r(35px) r(48px)
+		flex-shrink: 0
+		border-radius: 100px 0px
+		background: rgba(217, 217, 217, 0.12)
+		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25)
+
+		&:last-child
+			margin-top: r(100px)
+			border-radius: 0 100px
+			@apply justify-center
+			.items-content
+				margin-left: 0
+				margin-right: r(100px)
+		&-img
+			margin-top: r(-80px)
+			a
+				width: 221px
+				+img-ratio(math.div(275, 221))
+		&-content
+			margin-left: r(77px)
+			max-width: calc(620/1920*100*1rem)
+			&_title
+				h2
+					@apply text-4xl text-primary-FAE2A2 font-bold uppercase mb-6
+			&_desc
+				margin-bottom: r(20px)
+				p
+					line-height: 133.333% !important
+					@apply text-3xl text-white
+			a
+				width: 253.94px
+				border-radius: 50px
+				border: 3px solid #FAE2A6
+				box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+				line-height: 240%
+				img
+					margin-left: r(24px)
+				@apply flex justify-center items-center px-7 py-2.5 text-primary-FAE3A0 text-2xl font-medium whitespace-nowrap
+
+		@media screen and ( max-width: 1440px )
+			&-img
+				a
+					width: calc(221/1920*100*1rem)
+
+	@media screen and ( max-width: 1024px )
+		padding: r(100px) r(100px)
+		.items
+			width: 100%
+	@media screen and ( max-width: 768px )
+		.block-title
+			width: 100%
+	@media screen and ( max-width: 575px )
+		margin-bottom: r(100px)
+		height: 100vh
+		padding: 30px 0 !important
+		.block-title
+			width: 244px
+			height: 32px
+			flex-shrink: 0
+			h1
+				font-size: r(18px)
+		.items
+			border-radius: 32px 0px
+			@apply justify-center items-center flex-col
+			&-content
+				margin-left: 0
+				margin-top: 14px
+				@apply flex justify-center items-center flex-col
+				&_title
+					h2
+						@apply text-lg mb-2
+				&_desc
+					margin-bottom: r(20px)
+					p
+						@apply text-base text-center leading-normal
+				a
+					width: 164px
+					height: 30.141px
+					line-height: normal
+					border: 1px solid #FAE2A6
+					img
+						width: 16.843px
+						height: 16.843px
+						flex-shrink: 0
+						margin-left: r(16px)
+					@apply text-base
+			&:last-child
+				border-radius: 32px 0px
+				@apply flex-col-reverse
+				.items-content
+					margin-right: 0

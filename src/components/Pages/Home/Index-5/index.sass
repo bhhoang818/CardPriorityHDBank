@@ -1,0 +1,63 @@
+.sec-5
+	padding: r(200px) 0 !important
+	@apply bg-primary-5B2D40 relative
+	&::before
+		position: absolute
+		content: ''
+		background-repeat: no-repeat
+		background-size: cover
+		width: calc( 446/1920*100*1rem )
+		height: calc( 254/1920*100*1rem )
+		flex-shrink: 0
+		background-image: url('../img/icons/sec-5.png')
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+	#frmClip
+		width: calc( 960/1920*100*1rem)
+		+img-ratio(math.div(350, 960))
+		@apply mx-auto
+	@media screen and ( max-width: 1440px )
+		&::before
+			width: calc( 246/1920*100*1rem )
+			height: calc( 140/1920*100*1rem )
+	@media screen and ( max-width: 1366px )
+		padding: r(180px) 0 0 0 !important
+	@media screen and ( max-width: 1024px )
+		padding: r(60px) 0 0 0 !important
+		#frmClip
+			width: 100%
+			margin-top: r(180px)
+			+img-ratio(math.div(550, 960))
+	@media screen and ( max-width: 575px )
+		height: 80vh
+		position: relative
+		background-image: none !important
+		padding: 0 !important
+		&::after,
+		&::before
+			position: absolute
+			content: ''
+			background-repeat: no-repeat
+			background-size: cover
+			width: 117px
+			height: 206px
+			flex-shrink: 0
+		&::before
+			background-image: url('../img/icons/sec-2-1.png')
+			top: 0
+			right: 0
+			left: auto
+			transform: none
+		&::after
+			background-image: url('../img/icons/sec-2-2.png')
+			bottom: 0
+			left: 0
+		#frmClip
+			width: 100%
+			margin-top: 0
+		.logo
+			width: 151px
+			height: 76px
+			margin: -80px auto 10px
+			flex-shrink: 0

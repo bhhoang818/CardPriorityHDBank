@@ -1,0 +1,134 @@
+.sec-6
+	@apply bg-primary-5B2D40
+	.sec-swiper
+		width: 100%
+		position: relative
+		display: block !important
+		.mySwiper
+			.swiper-inner
+				&_img
+					max-width: 1320px
+					margin: 0 auto
+
+				&_content
+					position: absolute
+					bottom: 55px
+					left: 35%
+					transform: translateX(-50%)
+					.title
+						h1
+							font-size: r(105px)
+							background: linear-gradient(180deg, #FAD396 0%, #DAB57E 81.54%)
+							background-clip: text
+							-webkit-background-clip: text
+							-webkit-text-fill-color: transparent
+							@apply italic font-bold
+							span
+								font-size: r(40px)
+						p
+							font-size: r(45px)
+							@apply italic leading-[100%] text-white
+					.desc
+						.text
+							position: relative
+							h2
+								font-size: 60px
+								font-weight: 700
+								line-height: normal
+								text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+								background: linear-gradient(180deg, #D1AB6A 33.85%, #F5CE8F 73.44%, #FCD698 100%)
+								background-clip: text
+								-webkit-background-clip: text
+								-webkit-text-fill-color: #FCD698
+								&:last-child
+									font-size: 90px
+							h1
+								text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+								font-size: 300px
+								font-weight: 800
+								background: linear-gradient(180deg, #F9FAF0 0%, #FFF5D0 50.52%)
+								background-clip: text
+								-webkit-background-clip: text
+								-webkit-text-fill-color: #FFF5D0
+							img
+								position: absolute
+								top: 15px
+								right: 0
+					.img
+						max-width: r(813px)
+
+		.swiper-pagination
+			&-bullet
+				width: 14px
+				height: 14px
+				background: rgba($color: #FFFFFF, $alpha: .8)
+				&-active
+					@apply bg-primary-FAE3A0
+	@media screen and ( max-width: 1440px )
+		.sec-swiper
+			.mySwiper
+				.swiper-inner
+					&_content
+						bottom: 140px
+						.img
+							max-width: 595px
+	@media screen and ( max-width: 1024px )
+		margin-bottom: 50px
+		.sec-swiper
+			.mySwiper
+				.swiper-inner
+					&_content
+						bottom: 50px
+	@media screen and ( max-width: 768px )
+		.sec-swiper
+			.mySwiper
+				.swiper-inner
+					&_img
+						max-width: 100%
+					&_content
+						.img
+							max-width: unset
+							width: 400px
+						.title
+							h1
+								font-size: r(60px)
+								span
+									font-size: r(30px)
+							p
+								font-size: r(30px)
+	@media screen and ( max-width: 575px )
+		padding: 0 !important
+		height: 100vh !important
+		margin-bottom: 0
+		justify-content: flex-start !important
+		align-items: flex-start !important
+		.sec-swiper
+			width: 100%
+			.mySwiper
+				.swiper-inner
+					display: flex
+					flex-direction: column-reverse
+					&_img
+						img
+							transform: scale(1.005)
+					&_content
+						position: static
+						transform: none
+						.img
+							display: none
+
+						.title
+							@apply flex flex-col justify-center items-center
+							h1
+								margin: 8px 0
+								font-size: r(45px)
+								background: linear-gradient(180deg, #FFF 0%, #F7E0A4 45.31%)
+								background-clip: text
+								-webkit-background-clip: text
+								-webkit-text-fill-color: transparent
+								@apply italic font-bold leading-normal
+								span
+									font-size: r(25px)
+
+							p
+								@apply italic leading-[100%] text-white text-xl

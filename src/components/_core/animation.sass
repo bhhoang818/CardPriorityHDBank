@@ -1,0 +1,16 @@
+.zoom-img
+	overflow: hidden
+	.img
+		overflow: hidden
+
+	&:hover
+		img
+			transform: scale(1.05)
+	img
+		transition: .3s all ease-in-out
+
+@keyframes spin
+	0%
+		transform: rotate(0)
+	100%
+		transform: rotate(360deg)

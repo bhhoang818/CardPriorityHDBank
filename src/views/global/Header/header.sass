@@ -1,0 +1,48 @@
+header
+	transition: all 1s cubic-bezier(0.22, 0.44, 0, 1)
+	@apply fixed z-50 top-0 left-0 right-0 border-b-[5px] border-primary-FBD597 bg-primary-5B2D40
+	.header-wrapper
+		.brand-priority
+			width: 200px
+		nav
+			ul
+				li
+					a
+						@apply relative
+						&::before
+							content: ''
+							width: 24.631px
+							height: 21.39px
+							flex-shrink: 0
+							top: 50%
+							left: r(-25px)
+							background: url('../img/icons/start.svg')
+							@apply absolute -translate-y-1/2 -translate-x-1/2 bg-no-repeat
+	&.active
+		transition: all 2s cubic-bezier(0.22, 0.44, 0, 1)
+		@apply -top-full
+
+	@media screen and ( max-width: 768px )
+		@apply border-0 bg-transparent
+		&.active
+			top: -100%
+		.header-wrapper
+			.brand-priority
+				width: 150px
+				margin: 0 auto
+
+			nav
+				background: linear-gradient(180deg, rgba(133, 38, 69, 0.70) 72.57%, rgba(122, 32, 61, 0.70) 86.63%, rgba(122, 32, 61, 0.00) 100%)
+				&.active
+					@apply right-0 visible opacity-100 transition-all
+				@apply absolute top-full right-full w-full h-[290px] flex justify-start items-start invisible opacity-0 transition-all px-6 pt-16
+				ul
+					width: 100%
+					li
+						padding: 12px 0
+						width: 100%
+						a
+							&::before
+								display: none
+					li + li
+								border-top: solid .5px rgba(255, 255, 255, 0.32)

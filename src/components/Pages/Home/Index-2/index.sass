@@ -1,0 +1,72 @@
+.sec-2
+	padding: 0 !important
+	@apply bg-primary-5B2D40 relative flex-col justify-center items-center
+	h1
+		margin-bottom: r(65px)
+	.desc
+		position: relative
+		z-index: 1
+		p
+			line-height: 200%
+	&::after,
+	&::before
+		content: ''
+		width: calc( 323.19/1920*100*1rem )
+		height: calc( 180.0/1920*100*1rem)
+		background-repeat: no-repeat
+		background-size: contain
+		background-image: url('../img/icons/sec-2.png')
+		z-index: 0
+		@apply absolute
+	&::before
+		display: none
+	&::after
+		bottom: 0
+	@media screen and ( max-width: 1438.98px )
+		padding-bottom: 150px !important
+		margin-bottom: 30px
+		&::after
+			width: 183px
+			height: 100px
+		h1
+			margin-bottom: r(30px)
+	@media screen and ( max-width: 1024px )
+		margin: 50px 0
+		position: relative
+		padding-bottom: 0 !important
+		&::after,
+		&::before
+			width: 95px
+			height: 180px
+		&::before
+			display: block
+			top: 0
+			right: 0
+			background-image: url('../img/icons/sec-2-1.png')
+		&::after
+			bottom: -145px
+			left: 0
+			background-image: url('../img/icons/sec-2-2.png')
+
+	@media screen and ( max-width: 575px )
+		position: relative
+		margin-bottom: 250px
+		margin-top: 180px
+		padding-bottom: 30px !important
+		h1
+			margin-bottom: r(20px)
+			letter-spacing: -.5px
+		.desc
+			p
+				line-height: 250%
+		&::after,
+		&::before
+			content: ''
+			width: 140px
+			height: 246px
+		&::before
+			top: -250px
+			right: 0
+		&::after
+			left: 0
+			bottom: -250px

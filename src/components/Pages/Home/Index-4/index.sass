@@ -1,0 +1,84 @@
+.sec-4
+	@apply bg-primary-5B2D40
+	.items
+		width: calc(1112/1920*100*1rem)
+		margin: 0 auto
+		padding: r(35px) r(48px)
+		flex-shrink: 0
+		border-radius: 100px 0px
+		background: rgba(217, 217, 217, 0.12)
+		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25)
+
+		&-img
+			margin-top: r(-80px)
+			a
+				width: 221px
+				+img-ratio(math.div(275, 221))
+		&-content
+			margin-left: r(77px)
+			max-width: calc(620/1920*100*1rem)
+			&_title
+				h2
+					@apply text-4xl text-primary-FAE2A2 font-bold uppercase mb-6
+			&_desc
+				margin-bottom: r(20px)
+				p
+					line-height: 133.333% !important
+					@apply text-3xl text-white
+			a
+				width: 253.94px
+				border-radius: 50px
+				border: 3px solid #FAE2A6
+				box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+				line-height: 240%
+				img
+					margin-left: r(24px)
+				@apply flex justify-center items-center px-7 py-2.5 text-primary-FAE3A0 text-2xl font-medium whitespace-nowrap
+
+		@media screen and ( max-width: 1440px )
+			&-img
+				a
+					width: calc(221/1920*100*1rem)
+	.list-icon
+		margin-top: r(125px)
+		&-item
+			@apply flex flex-col justify-center items-center
+			&_content
+				p
+					line-height: normal !important
+	@media screen and ( max-width: 1024px )
+		padding: 0 0 r(60px) 0
+		.items
+			width: 100%
+	@media screen and ( max-width: 575px )
+		.items
+			border-radius: 32px 0px
+			@apply justify-center items-center flex-col
+			&-content
+				margin-left: 0
+				margin-top: 14px
+				@apply flex justify-center items-center flex-col
+				&_title
+					h2
+						@apply text-lg mb-2
+				&_desc
+					margin-bottom: r(20px)
+					p
+						@apply text-base text-center leading-normal
+				a
+					width: 164px
+					height: 30.141px
+					line-height: normal
+					border: 1px solid #FAE2A6
+					img
+						width: 16.843px
+						height: 16.843px
+						flex-shrink: 0
+						margin-left: r(16px)
+					@apply text-base
+		.list-icon
+			&-item
+				&_img
+					width: 67px
+					height: 67px
+					flex-shrink: 0

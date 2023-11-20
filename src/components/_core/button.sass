@@ -1,0 +1,59 @@
+.btn
+	display: inline-block
+	font-weight: 400
+	text-align: center
+	white-space: nowrap
+	vertical-align: middle
+	user-select: none
+	&:focus
+		outline: none !important
+		box-shadow: initial !important
+	&-toggle
+		margin-left: 0
+		cursor: pointer
+		padding: 0
+		min-width: 20px
+		min-height: 13.5px
+		transition: .3s all linear
+		@apply absolute right-6
+		span
+			display: block
+			position: absolute
+			height: r(3px)
+			width: 100%
+			background: #fff
+			border-radius: 9px
+			opacity: 1
+			left: 0
+			-webkit-transform: rotate(0deg)
+			-moz-transform: rotate(0deg)
+			-o-transform: rotate(0deg)
+			transform: rotate(0deg)
+			transition: .150s ease-in-out
+			&:nth-child(1)
+				top: 0
+			&:nth-child(2),
+			&:nth-child(3)
+				top: 5px
+			&:nth-child(4)
+				top: 10px
+		&.active
+			span
+				&:nth-child(1)
+					top: 18px
+					width: 0%
+					left: 50%
+				&:nth-child(2)
+					-webkit-transform: rotate(45deg)
+					-moz-transform: rotate(45deg)
+					-o-transform: rotate(45deg)
+					transform: rotate(45deg)
+				&:nth-child(3)
+					-webkit-transform: rotate(-45deg)
+					-moz-transform: rotate(-45deg)
+					-o-transform: rotate(-45deg)
+					transform: rotate(-45deg)
+				&:nth-child(4)
+					top: 18px
+					width: 0%
+					left: 50%
